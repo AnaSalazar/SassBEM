@@ -75,8 +75,13 @@ body {
 .pandas {
   text-align: center;
   margin-top: 2%; }
+  .pandas span {
+    font-size: 2em;
+    cursor: pointer; }
+    .pandas span:hover {
+      color: red; }
   .pandas img {
-    width: 15%;
+    width: 80%;
     margin-left: 5%; }
 
 .buttons {
