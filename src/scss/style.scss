@@ -44,7 +44,7 @@ body {
     display: inline;
     @include textAndMargin;
     &:hover {
-      cursor: pointer;
+      cursor: $cursor;
       color: $color-base;
     }
   }
@@ -52,8 +52,15 @@ body {
 
 .pandas {
   @include sections;
+  span{
+    font-size: $size-text;
+    cursor: $cursor;
+    &:hover {
+      color: red;
+    }
+  }
   img {
-    width: 15%;
+    width: 80%;
     margin-left: $margin;
   }
 }
