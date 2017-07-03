@@ -40,10 +40,10 @@
   padding: 0; }
 
 body {
-  background-color: pink; }
+  background-color: #B1CE3A; }
 
 .container {
-  width: 100%;
+  width: col-12;
   max-width: 1200px;
   margin: 0px auto; }
 
@@ -58,19 +58,19 @@ body {
   padding: 12px;
   float: left; }
 
-.nav {
-  background-color: green;
-  color: purple;
+.nav, footer {
+  background-color: #4D334D;
+  color: white;
   padding: 1%;
   text-align: center; }
   .nav__items {
     list-style: none;
     display: inline;
-    margin-left: 3%;
-    font-size: 2em; }
+    font-size: 2em;
+    margin-left: 5%; }
     .nav__items:hover {
       cursor: pointer;
-      color: pink; }
+      color: #B1CE3A; }
 
 .pandas {
   text-align: center;
@@ -83,17 +83,22 @@ body {
   text-align: center;
   margin-top: 2%; }
   .buttons__button {
+    background-color: #4D334D;
+    color: white;
     font-size: 2em;
     margin-left: 5%;
-    width: 25%;
-    background-color: purple;
-    color: pink; }
+    width: 25%; }
     .buttons__button:hover {
       cursor: pointer; }
 
 .text {
   text-align: justify;
   margin-top: 2%;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  color: black; }
+
+footer {
+  text-align: center;
+  margin-top: 2%; }
 
 /*# sourceMappingURL=style.css.map */
