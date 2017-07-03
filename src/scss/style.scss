@@ -1,7 +1,28 @@
+$color-green: green;
+$color-purple: purple;
+$color-pink: pink;
+$size-text: 2em;
+$size-text-small: 1.2em;
+$align-center: center;
+
+@function anchoColumnas($columns) {
+  @return percentage(($columns/12));
+}
+
+@for $numColumna from 1 through 12 {
+  .col-#{$numColumna}{
+    width: anchoColumnas($numColumna);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: $color-pink;
 }
 
 .container {
@@ -27,12 +48,49 @@
   float: left;
 }
 
-@function anchoColumnas($columns) {
-  @return percentage(($columns/12));
+.nav {
+  background-color: $color-green;
+  color: $color-purple;
+  padding: 1%;
+  text-align: $align-center;
+  &__items{
+    list-style: none;
+    display: inline;
+    margin-left: 3%;
+    font-size: $size-text;
+    &:hover {
+      cursor: pointer;
+      color: $color-pink;
+    }
+  }
 }
 
-@for $numColumna from 1 through 12 {
-  .col-#{$numColumna}{
-    width: anchoColumnas($numColumna);
+.pandas {
+  text-align: $align-center;
+  margin-top: 2%;
+  img {
+    width: 15%;
+    margin-left: 5%;
   }
+}
+
+.buttons {
+  text-align: $align-center;
+  margin-top: 2%;
+  &__button {
+    font-size: $size-text;
+    margin-left: 5%;
+    width: 25%;
+    background-color: $color-purple;
+    color: $color-pink;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.text {
+  text-align: justify;
+  margin-top: 2%;
+  font-size: $size-text-small;
 }
