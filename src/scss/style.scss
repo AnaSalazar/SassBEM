@@ -1,19 +1,6 @@
-$color-green: green;
-$color-purple: purple;
-$color-pink: pink;
-$size-text: 2em;
-$size-text-small: 1.2em;
-$align-center: center;
-
-@function anchoColumnas($columns) {
-  @return percentage(($columns/12));
-}
-
-@for $numColumna from 1 through 12 {
-  .col-#{$numColumna}{
-    width: anchoColumnas($numColumna);
-  }
-}
+@import "variables";
+@import "funciones";
+@import "mixin";
 
 * {
   box-sizing: border-box;
@@ -22,11 +9,11 @@ $align-center: center;
 }
 
 body {
-  background-color: $color-pink;
+  background-color: $color-base;
 }
 
 .container {
-  width: 100%;
+  width: col-12;
   max-width: 1200px;
   margin: 0px auto;
 }
@@ -49,40 +36,34 @@ body {
 }
 
 .nav {
-  background-color: $color-green;
-  color: $color-purple;
+  @include colors;
   padding: 1%;
   text-align: $align-center;
   &__items{
     list-style: none;
     display: inline;
-    margin-left: 3%;
-    font-size: $size-text;
+    @include textAndMargin;
     &:hover {
       cursor: pointer;
-      color: $color-pink;
+      color: $color-base;
     }
   }
 }
 
 .pandas {
-  text-align: $align-center;
-  margin-top: 2%;
+  @include sections;
   img {
     width: 15%;
-    margin-left: 5%;
+    margin-left: $margin;
   }
 }
 
 .buttons {
-  text-align: $align-center;
-  margin-top: 2%;
+  @include sections;
   &__button {
-    font-size: $size-text;
-    margin-left: 5%;
+    @include colors;
+    @include textAndMargin;
     width: 25%;
-    background-color: $color-purple;
-    color: $color-pink;
     &:hover {
       cursor: pointer;
     }
@@ -93,4 +74,10 @@ body {
   text-align: justify;
   margin-top: 2%;
   font-size: $size-text-small;
+  color: $color-text;
+}
+
+footer {
+  @include sections;
+  @extend .nav;
 }

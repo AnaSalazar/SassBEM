@@ -1,0 +1,14 @@
+@mixin sections {
+  text-align: $align-center;
+  margin-top: 2%;
+}
+
+@mixin colors {
+  background-color: $color-complement;
+  color: lighten($color-base, 70%);
+}
+
+@mixin textAndMargin {
+  font-size: $size-text;
+  margin-left: $margin;
+}
